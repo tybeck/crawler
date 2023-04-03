@@ -1,0 +1,23 @@
+service: crawler
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+custom:
+  tscpaths:
+    buildPath: dist
+
+functions:
+  main:
+    handler: dist/functions/get-department/main.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: '{proxy+}'

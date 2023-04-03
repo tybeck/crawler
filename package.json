@@ -1,0 +1,52 @@
+{
+  "name": "crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@hewmen/serverless-plugin-typescript": "^1.1.17",
+    "@nestjs/testing": "^9.3.12",
+    "@types/aws-lambda": "^8.10.114",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.0",
+    "@types/jsdom": "^21.1.1",
+    "@types/node": "^18.15.11",
+    "@types/supertest": "^2.0.12",
+    "eslint": "^8.37.0",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "serverless-offline": "^12.0.4",
+    "serverless-plugin-optimize": "^4.2.1-rc.1",
+    "serverless-plugin-typescript": "^2.1.4",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.0.5",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "serve": "npx serverless offline",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "start": "nodemon -e js,ts --watch src --exec \"yarn build && yarn serve\"",
+    "lint": "eslint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^9.3.12",
+    "@nestjs/core": "^9.3.12",
+    "@nestjs/platform-express": "^9.3.12",
+    "@vendia/serverless-express": "^4.10.1",
+    "aws-lambda": "^1.0.7",
+    "aws-serverless-express": "^3.4.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "express": "^4.18.2",
+    "jsdom": "^21.1.1",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^4.4.1",
+    "rxjs": "^7.8.0",
+    "typescript": "^4.9.5"
+  }
+}
